@@ -1,0 +1,22 @@
+.page-header {
+    background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/small-header.webp) center center / cover no-repeat;
+    padding: 8rem 0;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: $title-light-font;
+    font-size: $h1;
+
+    span{
+        font-family: $title-bold-font;
+    }
+}
+
+.title {
+    font-size: calc(2rem + 2vw);
+    line-height: 2.5rem;
+}
+
+.tagline {
+    font-size: calc(1.25rem + 2vw);
+}

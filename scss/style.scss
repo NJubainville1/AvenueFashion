@@ -1,0 +1,230 @@
+@import "../fonts/index";
+@import "vars/index";
+@import "functions/index";
+@import "mixins/index";
+@import "init/index";
+@import "typography/index";
+@import "ui/index";
+
+.client-sign-up {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: $title-light-font;
+
+    input, select{
+        background: #fff;
+        line-height: 1.5rem;
+        padding: .25rem .5rem;
+        font-family: Montserrat;
+        font-size: 1.25rem;
+        color: #999;
+    }
+}
+textarea{
+    min-height: 100px;
+    max-height: 400px;
+}
+label{
+    color: #999;    
+    font-size: 1rem;
+}
+//////////////////////////////
+.submit-form input {
+    border: 2px solid #222;
+    color: #222;
+    padding: 1rem;
+}
+.submit-form input:hover {
+    color: #00c8c8;
+    border: 2px solid #00c8c8;
+}
+.full-width input, .full-width select, .message textarea {
+    width: 100%;
+}
+.privacy-policy{
+    a{
+        color: #00c8c8;
+    }    
+}
+.help-area {
+    .need-help-header{
+        color: #00c8c8;
+    }
+    span{
+        color: #00c8c8;
+    }
+}
+footer{
+    background: #f8f8f8;
+    padding-top: 1.5rem;
+}
+.footer-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 450px;
+    margin: 0 auto;
+
+    a:hover{
+        color: #00c8c8;
+    }
+}
+.footer-tags{
+    display: block;
+    color: #333;
+}
+.footer-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 450px;
+    margin: 0 auto;
+
+    div{
+        padding: 1rem;
+        width: 300px;
+        text-align: center;
+        margin-right: 1rem;
+    }
+}
+.award-winner-box {
+    background: #222;
+    color: #fff;
+}
+.social-media-icons{
+    background: #00c8c8;
+}
+
+.social-media-icon-single{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-info div:nth-child(2) {
+    padding-right: 3rem;
+}
+
+.copyright{
+    background: #333;
+    color: #f8f8f89b;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 5px;
+}
+////////////
+@media(min-width:800px) {
+    .page-header{
+        background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center / cover no-repeat;
+    }
+    
+    .site-nav{
+        display: flex;
+        justify-content: space-between;
+
+        li:hover{
+            color: #00c8c8;
+        }
+    }
+    .toggle-menu-icon{
+        display: none;
+    }
+    .list-view{
+        display: flex;
+    }
+    .list-view li {
+        margin: 0 1rem;
+    }
+    .client-sign-up{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.25rem;
+        grid-template-areas: "reg reg" 
+        "first last" 
+        "email email" 
+        "pass confirm" 
+        "frequency phone" 
+        "terms terms" 
+        "message message" 
+        "signText signText" 
+        "signup signup" 
+        "prefText prefText" 
+        "pref pref" 
+        "submit privacy" 
+        "help help";
+    }
+    .form-header{
+        grid-area: reg;
+    }
+    .firstname{
+        grid-area: first;
+    }
+    .lastname{
+        grid-area: last;
+    }
+    .email{
+        grid-area: email;
+    }
+    .password{
+        grid-area: pass;
+    }
+    .passwordconfirm{
+        grid-area: confirm;
+    }
+    .frequency{
+        grid-area: frequency;
+    }
+    .phone{
+        grid-area: phone;
+    }
+    .terms{
+        grid-area: terms;
+    }
+    .messagebox{
+        grid-area: message;
+    }
+    .sign-up-header{
+        grid-area: signText;
+    }
+    .signup-boxes{
+        grid-area: signup;
+        display: flex;
+        justify-content: space-around; 
+    }
+    .preferences-header{
+        grid-area: prefText;
+    }
+    .checkbox{
+        width: inherit;
+        display: inline-block;
+        padding-left: .25rem;
+    }
+    .preferences-options{
+        display: flex;
+        grid-area: pref;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .preferences div{
+        width: calc(50% - .75rem);
+        margin: 1.125rem 0;
+    }
+    .submit-form{
+        grid-area: submit;
+        font-family: $title-font;
+    }
+    .privacy-policy {
+        grid-area: privacy;
+    }
+    .help-area{
+        grid-area: help;
+    }
+    .footer-info {
+        width: 80%;
+        max-width: 1000px;
+    }
+    .footer-boxes {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}

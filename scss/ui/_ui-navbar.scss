@@ -1,0 +1,54 @@
+.site-nav {
+    padding: 1.5rem 4rem;
+    position: relative;
+    z-index: 2;
+}
+.icon-view {
+    display: flex;
+    justify-content: space-between;
+}
+.list-view {
+    display: none;
+}
+.toggle-menu-icon {
+    width: 2rem;
+}
+.avenue-logo{
+    font-size: 1.125rem;
+    font-family: $title-font;
+
+    span{
+        color: #222222;
+        font-family: $title-bold-font;
+    }
+}
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;  
+  }
+  .mobile-link {
+    padding: 0.5rem 0;
+    align-self: center;
+  }  
+  .mobile-link a,
+  .mobile-link a:link,
+  .mobile-link a:visited,
+  .mobile-link a:active {
+    color: black;
+    text-decoration: none;
+  }  
+  .mobile-link a:hover{
+    color: #ccc;
+  }  
+  .menu-panel {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: -20rem;
+    left: 0;
+    padding: 2rem 0;
+    background-color: white;
+    z-index: 1;
+  }
