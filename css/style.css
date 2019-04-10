@@ -764,7 +764,7 @@ footer {
 }
 
 .footer-boxes div {
-  padding: 1rem;
+  padding: 2rem 0 1rem 0;
   width: 300px;
   text-align: center;
   margin-right: 1rem;
@@ -773,19 +773,27 @@ footer {
 .award-winner-box {
   background: #222;
   color: #fff;
+  font-size: 1.35rem;
+}
+
+.award-winner-box h2 {
+  font-family: "Montserrat Bold";
+}
+
+.award-winner-box p {
+  font-family: "Montserrat Light";
 }
 
 .social-media-icons {
   background: #00c8c8;
+  text-align: center;
 }
 
 .social-media-icon-single {
   width: 30px;
+  height: 30px;
   margin-right: 10px;
-}
-
-.footer-info div:nth-child(2) {
-  padding-right: 3rem;
+  color: white;
 }
 
 .copyright {

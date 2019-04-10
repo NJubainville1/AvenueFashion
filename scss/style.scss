@@ -81,7 +81,7 @@ footer{
     margin: 0 auto;
 
     div{
-        padding: 1rem;
+        padding: 2rem 0 1rem 0;
         width: 300px;
         text-align: center;
         margin-right: 1rem;
@@ -90,20 +90,25 @@ footer{
 .award-winner-box {
     background: #222;
     color: #fff;
+    font-size: $h2;
+    
+    h2{
+        font-family: $title-bold-font;            
+    }
+    p{
+        font-family: $title-light-font;
+    }
 }
 .social-media-icons{
     background: #00c8c8;
+    text-align: center;
 }
-
 .social-media-icon-single{
     width: 30px;
+    height: 30px;
     margin-right: 10px;
+    color: white;
 }
-
-.footer-info div:nth-child(2) {
-    padding-right: 3rem;
-}
-
 .copyright{
     background: #333;
     color: #f8f8f89b;
