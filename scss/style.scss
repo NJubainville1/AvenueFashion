@@ -1,10 +1,16 @@
 @import "../fonts/index";
 @import "vars/index";
-@import "functions/index";
 @import "mixins/index";
 @import "init/index";
 @import "typography/index";
 @import "ui/index";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 100%
+}
 
 .client-sign-up {
     max-width: 800px;
@@ -120,8 +126,7 @@ footer{
 @media(min-width:800px) {
     .page-header{
         background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center / cover no-repeat;
-    }
-    
+    }    
     .site-nav{
         display: flex;
         justify-content: space-between;
@@ -135,28 +140,29 @@ footer{
     }
     .list-view{
         display: flex;
-    }
-    .list-view li {
-        margin: 0 1rem;
+
+        li{
+            margin: 0 1rem;  
+        }
     }
     .client-sign-up{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 1rem;
         grid-row-gap: 1.25rem;
-        grid-template-areas: "reg reg" 
-        "first last" 
-        "email email" 
-        "pass confirm" 
-        "frequency phone" 
-        "terms terms" 
-        "message message" 
-        "signText signText" 
-        "signup signup" 
-        "prefText prefText" 
-        "pref pref" 
-        "submit privacy" 
-        "help help";
+        grid-template-areas:"reg reg" 
+                            "first last" 
+                            "email email" 
+                            "pass confirm" 
+                            "frequency phone" 
+                            "terms terms" 
+                            "message message" 
+                            "signText signText" 
+                            "signup signup" 
+                            "prefText prefText" 
+                            "pref pref" 
+                            "submit privacy" 
+                            "help help";
     }
     .form-header{
         grid-area: reg;
@@ -196,21 +202,21 @@ footer{
         display: flex;
         justify-content: space-around; 
     }
-    .preferences-header{
-        grid-area: prefText;
-    }
     .checkbox{
         width: inherit;
         display: inline-block;
         padding-left: .25rem;
     }
-    .preferences-options{
+    .preferences-header{
+        grid-area: prefText;
+    }
+    .preferences{
         display: flex;
         grid-area: pref;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .preferences div{
+    .preferences-options{
         width: calc(50% - .75rem);
         margin: 1.125rem 0;
     }
