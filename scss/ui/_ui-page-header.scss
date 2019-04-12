@@ -13,10 +13,14 @@
 }
 
 .title {
-    font-size: calc(2rem + 2vw);
+    font-size: calc(1.5rem + 2vw);
     line-height: 2.5rem;
+    font-family: $title-light-font;
+    color: #727272;    
 }
 
 .tagline {
     font-size: calc(1.25rem + 2vw);
+    font-family: $title-font;
+    font-size: $h2;
 }

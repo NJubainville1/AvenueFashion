@@ -11,7 +11,9 @@ body {
     line-height: 1.5;
     font-size: 100%
 }
-
+a{
+    cursor: pointer;    
+}
 .client-sign-up {
     max-width: 800px;
     margin: 0 auto;
@@ -34,6 +36,9 @@ body {
 label{
     color: #999;    
     font-size: 1rem;
+}
+.mid-form-header{
+    font-family: $title-font;
 }
 .signup-boxes{
     display: flex;
@@ -77,12 +82,13 @@ label{
     }    
 }
 .help-area {
-    .need-help-header{
+    .need-help-header, .help-number{
         color: #00c8c8;
+        font-family: $title-bold-font;
     }
     span{
         color: #00c8c8;
-    }
+    }    
 }
 footer{
     background: #f8f8f8;
@@ -103,8 +109,12 @@ footer{
         color: #00c8c8;
     }
 }
+.footer-info-box{
+    width: 50%;
+    margin-bottom: 50px;
+}
 .footer-head{
-    font-family: $title-font;
+    font-family: $title-bold-font;
     margin-bottom: 15px;
 }
 .footer-tags, .footer-contact-details{
@@ -128,11 +138,10 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 450px;
     margin: 0 auto;
 
     div{
-        padding: 2rem 0 1rem 0;
+        padding: 2rem 0 2rem 0;
         width: 300px;
         text-align: center;
         margin-right: 1rem;
@@ -152,12 +161,12 @@ footer{
 }
 .social-media-icons{
     background: #00c8c8;
-    text-align: center;
+    text-align: center;    
 }
 .social-media-icon-single{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
     color: white;
 }
 .copyright{
@@ -186,7 +195,10 @@ footer{
         display: flex;
 
         li{
-            margin: 0 1rem;  
+            margin: 0 1rem;              
+        }
+        a{
+            color: #222222;
         }
     }
     .client-sign-up{
@@ -281,6 +293,9 @@ footer{
     .footer-info {
         width: 80%;
         max-width: 1000px;
+    }
+    .footer-info-box{
+        width: 25%;
     }
     .footer-boxes {
         width: 80%;

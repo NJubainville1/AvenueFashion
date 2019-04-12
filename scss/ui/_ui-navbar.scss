@@ -9,6 +9,10 @@
 }
 .list-view {
     display: none;
+    a:hover{
+        color: #00c8c8;
+        text-decoration: none;
+    }
 }
 .toggle-menu-icon {
     width: 2rem;
