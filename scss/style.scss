@@ -26,25 +26,49 @@ body {
         color: #999;
     }
 }
-textarea{
+.message {    
     min-height: 100px;
     max-height: 400px;
+    width: 100%;    
 }
 label{
     color: #999;    
     font-size: 1rem;
 }
-//////////////////////////////
-.submit-form input {
-    border: 2px solid #222;
-    color: #222;
-    padding: 1rem;
+.signup-boxes{
+    display: flex;
+    flex-wrap: wrap;    
+    .checkbox{
+        width: 33%;
+    }
 }
-.submit-form input:hover {
-    color: #00c8c8;
-    border: 2px solid #00c8c8;
+.preferences{
+    display: flex;
+    flex-wrap: wrap;
 }
-.full-width input, .full-width select, .message textarea {
+.preferences-options{
+    width: 50%;
+
+    select{
+        width: 100%;
+    }
+    label{
+        display: block;
+    }
+}
+.submit-form{
+    max-width: 50%;
+    input{
+        border: 2px solid #222;
+        color: #222;
+        padding: 1rem;
+    }
+    input:hover{
+        color: #00c8c8;
+        border: 2px solid #00c8c8;
+    }
+}
+.width-fill input, .width-fill select{
     width: 100%;
 }
 .privacy-policy{
@@ -62,7 +86,7 @@ label{
 }
 footer{
     background: #f8f8f8;
-    padding-top: 1.5rem;
+    padding-top: 1.5rem;    
 }
 .footer-info{
     display: flex;
@@ -71,15 +95,36 @@ footer{
     width: 450px;
     margin: 0 auto;
 
+    a{
+        color: #727272;
+    }
+
     a:hover{
         color: #00c8c8;
+    }
+}
+.footer-head{
+    font-family: $title-font;
+    margin-bottom: 15px;
+}
+.footer-tags, .footer-contact-details{
+    font-family: $title-light-font;
+}
+.footer-contact-details{
+    line-height: 1;
+    padding: 0;
+    :nth-child(4){
+        margin-bottom: 15px;
+    }
+    :nth-child(5){
+        margin-bottom: 10px;
     }
 }
 .footer-tags{
     display: block;
     color: #333;
 }
-.footer-boxes {
+.footer-boxes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -122,7 +167,6 @@ footer{
     margin-bottom: 0;
     padding: 5px;
 }
-////////////
 @media(min-width:800px) {
     .page-header{
         background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center / cover no-repeat;
@@ -197,8 +241,10 @@ footer{
     .sign-up-header{
         grid-area: signText;
     }
-    .signup-boxes{
+    .signups{
         grid-area: signup;
+    }
+    .signup-boxes{
         display: flex;
         justify-content: space-around; 
     }
@@ -221,6 +267,8 @@ footer{
         margin: 1.125rem 0;
     }
     .submit-form{
+        width: 100%;
+        max-width: 350px;
         grid-area: submit;
         font-family: $title-font;
     }

@@ -693,14 +693,51 @@ body {
   color: #999;
 }
 
-textarea {
+.message {
   min-height: 100px;
   max-height: 400px;
+  width: 100%;
 }
 
 label {
   color: #999;
   font-size: 1rem;
+}
+
+.signup-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.signup-boxes .checkbox {
+  width: 33%;
+}
+
+.preferences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.preferences-options {
+  width: 50%;
+}
+
+.preferences-options select {
+  width: 100%;
+}
+
+.preferences-options label {
+  display: block;
+}
+
+.submit-form {
+  max-width: 50%;
 }
 
 .submit-form input {
@@ -714,7 +751,7 @@ label {
   border: 2px solid #00c8c8;
 }
 
-.full-width input, .full-width select, .message textarea {
+.width-fill input, .width-fill select {
   width: 100%;
 }
 
@@ -748,8 +785,34 @@ footer {
   margin: 0 auto;
 }
 
+.footer-info a {
+  color: #727272;
+}
+
 .footer-info a:hover {
   color: #00c8c8;
+}
+
+.footer-head {
+  font-family: "Montserrat Regular";
+  margin-bottom: 15px;
+}
+
+.footer-tags, .footer-contact-details {
+  font-family: "Montserrat Light";
+}
+
+.footer-contact-details {
+  line-height: 1;
+  padding: 0;
+}
+
+.footer-contact-details :nth-child(4) {
+  margin-bottom: 15px;
+}
+
+.footer-contact-details :nth-child(5) {
+  margin-bottom: 10px;
 }
 
 .footer-tags {
@@ -907,11 +970,13 @@ footer {
     -ms-grid-column-span: 2;
     grid-area: signText;
   }
-  .signup-boxes {
+  .signups {
     -ms-grid-row: 9;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: signup;
+  }
+  .signup-boxes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -948,6 +1013,8 @@ footer {
     margin: 1.125rem 0;
   }
   .submit-form {
+    width: 100%;
+    max-width: 350px;
     -ms-grid-row: 12;
     -ms-grid-column: 1;
     grid-area: submit;
