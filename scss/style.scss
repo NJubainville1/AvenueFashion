@@ -1,5 +1,4 @@
 @import "../fonts/index";
-@import "vars/index";
 @import "mixins/index";
 @import "init/index";
 @import "typography/index";
@@ -45,6 +44,9 @@ label{
     flex-wrap: wrap;    
     .checkbox{
         width: 33%;
+    }
+    label{
+        padding-left: 10px;
     }
 }
 .preferences{
@@ -141,8 +143,8 @@ footer{
     margin: 0 auto;
 
     div{
-        padding: 2rem 0 2rem 0;
-        width: 300px;
+        padding: 2rem 0 1.5rem 0;
+        min-width: 300px;
         text-align: center;
         margin-right: 1rem;
     }
@@ -161,7 +163,10 @@ footer{
 }
 .social-media-icons{
     background: #00c8c8;
-    text-align: center;    
+    text-align: center;
+    svg:hover{
+        color: black;
+    }
 }
 .social-media-icon-single{
     width: 20px;
@@ -174,33 +179,9 @@ footer{
     color: #f8f8f89b;
     text-align: center;
     margin-bottom: 0;
-    padding: 5px;
+    padding: 5px;    
 }
-@media(min-width:800px) {
-    .page-header{
-        background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center / cover no-repeat;
-    }    
-    .site-nav{
-        display: flex;
-        justify-content: space-between;
-
-        li:hover{
-            color: #00c8c8;
-        }
-    }
-    .toggle-menu-icon{
-        display: none;
-    }
-    .list-view{
-        display: flex;
-
-        li{
-            margin: 0 1rem;              
-        }
-        a{
-            color: #222222;
-        }
-    }
+@media(min-width:800px){
     .client-sign-up{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -290,15 +271,68 @@ footer{
     .help-area{
         grid-area: help;
     }
-    .footer-info {
-        width: 80%;
-        max-width: 1000px;
+    .footer-info{
+        width: 90%;
     }
     .footer-info-box{
         width: 25%;
     }
+}
+@media(min-width:1200px) {
+    .page-header{
+        background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center / cover no-repeat;
+    }
+    .title{
+        color: #727272;
+    }    
+    .site-nav{
+        display: flex;
+        justify-content: space-between;
+
+        li:hover{
+            color: #00c8c8;
+        }
+    }
+    .toggle-menu-icon{
+        display: none;
+    }
+    .list-view{
+        display: flex;
+
+        li{
+            margin: 0 1rem;              
+        }
+        a:active{
+            color: #00e1ff;
+        }
+        a{
+            color: #222222;
+        }
+    }    
+    .footer-info {
+        width: 80%;
+        max-width: 1000px;
+    }
     .footer-boxes {
         width: 80%;
+        max-width: 1000px;
         margin-top: 1rem;
+    }
+    .award-winner-box, .social-media-icons{
+        width: 45%;
+    }
+    .social-media-icon-single{
+        width: calc(1rem + 1vw);
+        max-width: 50px;
+        height: calc(1rem + 1vw);
+        max-height: 50px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .copyright{        
+        p{
+            width: 50%;
+            text-align: middle;
+        }
     }
 }

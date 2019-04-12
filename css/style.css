@@ -53,10 +53,6 @@
   margin-left: 5px;
 }
 
-.width-fill input, .width-fill select, .message textarea {
-  width: 100%;
-}
-
 div {
   margin-bottom: 20px;
   padding: 0 10px 0 10px;
@@ -570,18 +566,20 @@ h6 {
 }
 
 .site-nav {
-  padding: 1.5rem 4rem;
+  padding: 2rem 4rem 1.5rem 4rem;
   position: relative;
   z-index: 2;
-}
-
-.icon-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.icon-view {
+  margin: 0;
+  padding: 0;
 }
 
 .list-view {
@@ -608,6 +606,7 @@ h6 {
 }
 
 .mobile-links {
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,16 +667,16 @@ h6 {
 }
 
 .title {
-  font-size: calc(1.5rem + 2vw);
+  font-size: calc(1rem + 2vw);
   line-height: 2.5rem;
   font-family: "Montserrat Light";
-  color: #727272;
+  color: white;
+  margin-bottom: 25px;
 }
 
 .tagline {
-  font-size: calc(1.25rem + 2vw);
+  font-size: calc(1rem + 1vw);
   font-family: "Montserrat Regular";
-  font-size: 1.35rem;
 }
 
 body {
@@ -731,6 +730,10 @@ label {
 
 .signup-boxes .checkbox {
   width: 33%;
+}
+
+.signup-boxes label {
+  padding-left: 10px;
 }
 
 .preferences {
@@ -856,8 +859,8 @@ footer {
 }
 
 .footer-boxes div {
-  padding: 2rem 0 2rem 0;
-  width: 300px;
+  padding: 2rem 0 1.5rem 0;
+  min-width: 300px;
   text-align: center;
   margin-right: 1rem;
 }
@@ -881,6 +884,10 @@ footer {
   text-align: center;
 }
 
+.social-media-icons svg:hover {
+  color: black;
+}
+
 .social-media-icon-single {
   width: 20px;
   height: 20px;
@@ -897,35 +904,6 @@ footer {
 }
 
 @media (min-width: 800px) {
-  .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.725)), to(rgba(49, 49, 49, 0.725))), url(../../img/large-header.webp) center center/cover no-repeat;
-    background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center/cover no-repeat;
-  }
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .site-nav li:hover {
-    color: #00c8c8;
-  }
-  .toggle-menu-icon {
-    display: none;
-  }
-  .list-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .list-view li {
-    margin: 0 1rem;
-  }
-  .list-view a {
-    color: #222222;
-  }
   .client-sign-up {
     display: -ms-grid;
     display: grid;
@@ -1057,15 +1035,72 @@ footer {
     grid-area: help;
   }
   .footer-info {
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
   }
   .footer-info-box {
     width: 25%;
   }
+}
+
+@media (min-width: 1200px) {
+  .page-header {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.725)), to(rgba(49, 49, 49, 0.725))), url(../../img/large-header.webp) center center/cover no-repeat;
+    background: linear-gradient(rgba(49, 49, 49, 0.725), rgba(49, 49, 49, 0.725)), url(../../img/large-header.webp) center center/cover no-repeat;
+  }
+  .title {
+    color: #727272;
+  }
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .site-nav li:hover {
+    color: #00c8c8;
+  }
+  .toggle-menu-icon {
+    display: none;
+  }
+  .list-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .list-view li {
+    margin: 0 1rem;
+  }
+  .list-view a:active {
+    color: #00e1ff;
+  }
+  .list-view a {
+    color: #222222;
+  }
+  .footer-info {
+    width: 80%;
+    max-width: 1000px;
+  }
   .footer-boxes {
     width: 80%;
+    max-width: 1000px;
     margin-top: 1rem;
+  }
+  .award-winner-box, .social-media-icons {
+    width: 45%;
+  }
+  .social-media-icon-single {
+    width: calc(1rem + 1vw);
+    max-width: 50px;
+    height: calc(1rem + 1vw);
+    max-height: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .copyright p {
+    width: 50%;
+    text-align: middle;
   }
 }
 /*# sourceMappingURL=style.css.map */

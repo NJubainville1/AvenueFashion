@@ -1,11 +1,13 @@
 .site-nav {
-    padding: 1.5rem 4rem;
+    padding: 2rem 4rem 1.5rem 4rem;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;    
 }
 .icon-view {
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 .list-view {
     display: none;
@@ -27,6 +29,7 @@
     }
 }
 .mobile-links {
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-content: center;
